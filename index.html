@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="theme.css" />
+</head>
+<body>
+
+<div class="container" id="app">
+    <div class="card">
+        <h1>Список задач!</h1>
+        <div class="form-control">
+            <input
+                    v-model="input"
+                    type="text"
+                    placeholder="Введите значение"
+                    @keyup.enter="onAdd"
+            />
+        </div>
+        <button class="btn" @click="onAdd">  Добавить  </button>
+        <hr />
+        <div v-if="notes.length > 0">
+            <ul class="list" v-for="(note, idx) in notes">
+                <li class="list-item">{{ note }}
+                <button class="btn danger" @click="onRemove(idx)">  Удалить  </button>
+                </li>
+            </ul>
+            <hr />
+            <strong> Общее количество : {{ notes.length }} </strong>
+        </div>
+        <div v-else> Заметок пока нет. Добавьте первую</div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/vue@next"></script>
+<script src="vue.js"></script>
+
+</body>
+</html>
