@@ -14,9 +14,10 @@
             <input
                     v-model="input"
                     type="text"
-                    placeholder="Введите значение"
+                    placeholder="Введите Задачу"
                     @keyup.enter="onAdd"
             />
+
         </div>
         <button class="btn" @click="onAdd">  Добавить  </button>
         <hr />
@@ -27,7 +28,7 @@
                 </li>
             </ul>
             <hr />
-            <strong> Общее количество : {{ notes.length }} </strong>
+            <strong> Общее количество заметок : {{ notes.length }} </strong>
         </div>
         <div v-else> Заметок пока нет. Добавьте первую</div>
     </div>

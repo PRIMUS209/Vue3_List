@@ -9,7 +9,8 @@ body {
 .container {
     margin-left: auto;
     margin-right: auto;
-    padding: .5rem;
+    padding-left: .5rem;
+    padding-right: 1rem;
     background-color: aliceblue;
     justify-content: center;
     width: 600px;
@@ -21,6 +22,14 @@ body {
     font-family: "Corbel Light";
     font-size: 20px;
 }
+input {
+    width: 100%;
+    border: 2px solid #26824d;
+    border-radius: 3px;
+    font-family: Constantia;
+    font-size: 16px;
+    outline: none;
+}
 .list {
     justify-content: inherit;
     text-align: left;
@@ -28,7 +37,7 @@ body {
     padding-left: 0;
 }
 .btn  {
-    border-radius: 8px;
+    border-radius: 12px;
     border: 2px solid #26824d;
     font-size: 16px;
     font-family: sans-serif;
